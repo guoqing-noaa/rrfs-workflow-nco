@@ -7,7 +7,7 @@ whatis([===[Loads libraries needed for running RRFS workflow on Hercules ]===])
 
 load("contrib")
 load("rocoto")
-load("wget")
+--load("wget")
 
 prepend_path("MODULEPATH","/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.5.0/envs/unified-env/install/modulefiles/Core")
 load(pathJoin("stack-intel", os.getenv("stack_intel_ver") or "2021.9.0"))
