@@ -13,9 +13,8 @@ cd ${HOMErrfs}/sorc/RDASApp
 rm -rf sorc/mpas
 git clone -b tag_cmake --recursive https://github.com/guoqing-noaa/MPAS-Model sorc/mpas
 cp ../Registry.xml sorc/mpas/src/core_atmosphere
-cp ../hera.gnu.lua modulefiles/RDAS/hera.intel.lua
+cp ../hera.gnu.lua modulefiles/RDAS/hera.intel.lua # user gnu for JEDI on Hera
 rm -rf build/
-export COMPILER=gnu
 ./build.sh -m MPAS -j20
 
 mkdir -p ${HOMErrfs}/exec
